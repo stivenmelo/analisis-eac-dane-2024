@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Archivos temporales de Office
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# IMPORTANTE: los datos SÍ deben subirse al repositorio (requisito de la entrega).
+# Si algún archivo supera los 100 MB de GitHub, comprimirlo o versionarlo con Git LFS
+# en lugar de ignorarlo.

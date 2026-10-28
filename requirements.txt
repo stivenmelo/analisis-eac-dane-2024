@@ -1,0 +1,9 @@
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.13
+openpyxl>=3.1
+# Kernel para ejecutar el notebook desde VS Code o Google Colab.
+# Se usa ipykernel en vez de jupyter/jupyterlab: la interfaz web completa no se
+# necesita y sus archivos superan el limite de 260 caracteres de ruta en Windows.
+ipykernel>=6.29
