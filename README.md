@@ -67,7 +67,45 @@ EncuestaAnualdeComercio-EAC-2024/
 - **Enlace:** _(pendiente — pegar aquí el enlace público al video)_
 - **Ubicación en el repositorio:** carpeta [`video/`](video/)
 
-## 7. Cómo ejecutar el análisis
+## 7. Etapas del proyecto
+
+El proyecto se construye en **tres etapas**, una por módulo del curso. La entrega es **única y al final**, en este mismo repositorio.
+
+### Etapa 1 — Módulo 1: Fundamentos y preparación de datos ✅
+
+Selección y justificación del dataset, exploración inicial, limpieza y tratamiento de nulos y outliers.
+
+**Completada.**
+
+### Etapa 2 — Módulo 2: Análisis Estadístico
+
+**Objetivo:** aplicar medidas estadísticas descriptivas para comprender el comportamiento de los datos.
+
+| # | Tarea | Estado |
+|---|---|---|
+| 1 | Calcular e interpretar **medidas de tendencia central** (media, mediana, moda) | ⬜ |
+| 2 | Calcular e interpretar **medidas de dispersión** (rango, varianza, desviación estándar) | ⬜ |
+| 3 | **Comparar y contrastar variables** usando análisis estadístico básico | ⬜ |
+| 4 | Identificar **outliers, relaciones o posibles hipótesis** basadas en los valores | ⬜ |
+
+**Evidencias que debe producir esta etapa:**
+
+- Resultados con **explicaciones breves en lenguaje sencillo** (no solo la salida de `describe()`).
+- **Tablas / resúmenes** de estadísticas.
+- **Gráficos** que muestren la naturaleza de los datos (histogramas, diagramas de caja).
+- **Interpretaciones relevantes para el contexto profesional** del equipo.
+
+**Variables candidatas de la EAC para el análisis:** ventas, consumo intermedio, personal ocupado, sueldos y salarios, inversión y valor agregado — todas numéricas y en escalas muy distintas, lo que hace necesario el **coeficiente de variación** para compararlas entre sí.
+
+> Dos preguntas del contexto que esta etapa puede responder con solo estadística descriptiva:
+> - ¿La media de ventas se aleja mucho de la mediana? Si sí, el sector está **concentrado** en pocas empresas grandes (asimetría positiva).
+> - ¿Qué subsector tiene mayor **variabilidad relativa** en remuneración? Se responde con el coeficiente de variación, no con la desviación estándar, porque las escalas difieren.
+
+### Etapa 3 — Módulo 3
+
+_(Pendiente — el enunciado aún no ha sido publicado.)_
+
+## 8. Cómo ejecutar el análisis
 
 ### Opción A — Google Colab (recomendada)
 1. Abrir `notebook/EAC_2024_analisis.ipynb` en [Google Colab](https://colab.research.google.com/).
@@ -79,13 +117,32 @@ pip install -r requirements.txt
 jupyter notebook notebook/EAC_2024_analisis.ipynb
 ```
 
-## 8. Estado del proyecto
+## 9. Estado del proyecto
 
-- [ ] **Módulo 1** — Fundamentos y preparación de datos (selección, exploración, limpieza)
-- [ ] **Módulo 2** — _(pendiente de completar con el enunciado)_
+### Etapas
+
+- [x] **Módulo 1** — Fundamentos y preparación de datos (selección, exploración, limpieza)
+- [ ] **Módulo 2** — Análisis estadístico descriptivo (tendencia central, dispersión, comparación de variables, outliers)
 - [ ] **Módulo 3** — _(pendiente de completar con el enunciado)_
-- [ ] Presentación de apoyo
-- [ ] Video (2–5 min)
-- [ ] Entrega individual del enlace del repositorio en Canvas
+
+### Entregables del repositorio
+
+- [x] `datos/` — datasets utilizados
+- [ ] `notebook/EAC_2024_analisis.ipynb` — código del análisis *(creado, en desarrollo)*
+- [ ] `presentacion/` — presentación de apoyo (PDF o PPTX)
+- [ ] `video/` — video de presentación o enlace
+- [ ] `README.md` — contexto ✅, integrantes ⬜, enlace al video ⬜
+
+### Requisitos de entrega
+
+- [ ] Equipo de **2 o 3 personas** (obligatorio)
+- [ ] Repositorio **público** y consultable — *verificar antes de entregar*
+- [ ] Video de **2 a 5 minutos**, público, explicando las **tres etapas**
+      *(fuera de ese rango el video no se califica)*
+- [ ] Enlace al repositorio pegado en la actividad **Entrega de Proyecto** de Canvas
+      **por cada integrante** (el mismo enlace para todos)
+
+> Únicamente se acepta la entrega por Canvas. No se admiten correo, Teams ni comentarios.
+> El único canal para dudas es la mensajería de Canvas.
 
 **Fecha límite de entrega:** 21 de noviembre, 23:59.
