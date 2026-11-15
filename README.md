@@ -101,9 +101,57 @@ Selección y justificación del dataset, exploración inicial, limpieza y tratam
 > - ¿La media de ventas se aleja mucho de la mediana? Si sí, el sector está **concentrado** en pocas empresas grandes (asimetría positiva).
 > - ¿Qué subsector tiene mayor **variabilidad relativa** en remuneración? Se responde con el coeficiente de variación, no con la desviación estándar, porque las escalas difieren.
 
-### Etapa 3 — Módulo 3
+### Etapa 3 — Módulo 3: Modelado Matemático y Storytelling
 
-_(Pendiente — el enunciado aún no ha sido publicado.)_
+**Objetivo:** comunicar hallazgos mediante **visualizaciones efectivas** y **narrativa basada en datos**.
+
+| # | Tarea | Estado |
+|---|---|---|
+| 1 | **Crear visualizaciones claras y relevantes** que resuman los hallazgos, escogiendo las más adecuadas para contar la historia (barras, histogramas, boxplots, mapas, etc.) | ⬜ |
+| 2 | **Desarrollar una narrativa (*storytelling*)** que conecte datos, visualizaciones y conclusiones de forma comprensible | ⬜ |
+| 3 | **Elegir, entrenar y evaluar un modelo predictivo simple** (ej. regresión lineal) e **interpretar sus resultados** de forma clara | ⬜ |
+| 4 | **Proponer una aplicación profesional concreta** del análisis, explicando cómo usaríamos este enfoque en nuestro entorno laboral o futuro campo de trabajo | ⬜ |
+
+**Evidencias que debe producir esta etapa:**
+
+- **Visualizaciones finales claras y bien etiquetadas** (título descriptivo, ejes con nombre y unidad, anotación sobre el valor que importa).
+- **Breve explicación escrita y hablada del modelo:** qué hace, cómo funciona y qué resultados dio.
+- **Conclusión:** resumen visual + *storytelling* + aplicación profesional.
+
+**Modelo candidato para la EAC.** La Etapa 2 ya establece que las variables económicas están correlacionadas y son fuertemente asimétricas. Una **regresión lineal simple o múltiple** sobre esas mismas variables encaja con lo que pide el enunciado ("modelo predictivo simple"):
+
+| Variante | Variable objetivo (`y`) | Predictores (`X`) |
+|---|---|---|
+| Simple | `produccion_bruta` | `personal_ocupado` |
+| Múltiple | `produccion_bruta` | `personal_ocupado`, `consumo_intermedio`, `sueldos_y_salarios` |
+
+> **"Evaluar" es parte del enunciado, no un extra.** No basta con entrenar: hay que separar
+> **train/test** (70/30 u 80/20) y reportar las métricas. Para regresión: **R²**, y **MAE o RMSE**
+> en la unidad original (miles de pesos), que es la interpretable. Evaluar con los mismos datos
+> del entrenamiento **infla el resultado** y no mide la capacidad de generalizar.
+>
+> Dada la asimetría del sector, conviene probar también la variante **log–log**
+> (`log(y) ~ log(X)`) y comparar el R² de ambas antes de quedarse con una.
+
+**Visualizaciones candidatas.** Las de la Etapa 2 sirven de base; estas son las que *cuentan la historia*:
+
+- **Barras** — ventas totales por actividad comercial (CIIU), ordenadas de mayor a menor: muestra la concentración del sector.
+- **Histograma** — distribución de ventas: evidencia la asimetría positiva de la hipótesis.
+- **Boxplot** — remuneración promedio por escala de personal: compara distribuciones y hace visibles los outliers.
+- **Dispersión con recta de regresión** — `personal_ocupado` vs. `produccion_bruta`: es el gráfico del modelo.
+
+**La narrativa**, siguiendo el arco Inicio – Desarrollo – Cierre:
+
+| Fase | Qué va | Responde a |
+|---|---|---|
+| **Inicio** | Por qué importa el sector comercio y qué pregunta nos hacemos | ¿Por qué estamos aquí? |
+| **Desarrollo** | La concentración del sector, la evidencia estadística y el modelo | ¿Qué encontramos? ¿Cómo lo sabemos? |
+| **Cierre** | Qué decisión permite anticipar el modelo y para quién | ¿Qué significa? ¿Qué hacemos? |
+
+> **El punto 4 no sale del análisis: hay que redactarlo.** "Aplicación profesional concreta"
+> significa nombrar una decisión real — *"el área de X podría estimar Y a partir de Z sin esperar
+> a la publicación anual del DANE"*. Aparece **dos veces** en el enunciado (en la tarea 4 y en las
+> evidencias), y es también lo que debe cerrar el video.
 
 ## 8. Cómo ejecutar el análisis
 
@@ -123,7 +171,7 @@ jupyter notebook notebook/EAC_2024_analisis.ipynb
 
 - [x] **Módulo 1** — Fundamentos y preparación de datos (selección, exploración, limpieza)
 - [ ] **Módulo 2** — Análisis estadístico descriptivo (tendencia central, dispersión, comparación de variables, outliers)
-- [ ] **Módulo 3** — _(pendiente de completar con el enunciado)_
+- [ ] **Módulo 3** — Modelado matemático y storytelling (visualizaciones, narrativa, modelo predictivo evaluado, aplicación profesional)
 
 ### Entregables del repositorio
 
