@@ -15,12 +15,6 @@ Proyecto **DataXperience** · Universidad EAN · Análisis de la Encuesta Anual 
 > palabras por minuto, que es un ritmo de lectura tranquilo. Si hablas más rápido sobra
 > margen; si hablas más lento, el margen hasta los 5:00 absorbe la diferencia.
 
-> ⚠️ **El enunciado pide equipo de 2 o 3 personas y que el video lo presente el equipo.**
-> Este guion está escrito para una sola voz porque así está el proyecto hoy, pero el
-> requisito sigue ahí y no se resuelve con el guion. Si no hay forma de sumar a alguien,
-> vale la pena preguntarlo por la mensajería de Canvas **antes** de grabar — es el único
-> canal admitido para dudas.
-
 ---
 
 ## Tabla de tiempos
@@ -250,3 +244,91 @@ prefieres leerlas de la diapositiva:
 | CV por dominio de 1,77 a 6,70 | 2.5.1 y 3.1.2 |
 | R² 0,729 · error mediano 35,5 % · elasticidades 0,16 y 0,81 | `EAC_2024_modelo.ipynb` 3.2 y 4.2 |
 | Modelo lineal: R² 0,808 · error mediano 62,8 % | 4.2 |
+
+## Texto de corrido
+
+Todo lo que hay que decir, seguido, para leerlo de una sola pasada o cargarlo en un
+teleprompter. **Los números entre corchetes no se leen**: marcan en qué diapositiva estás y
+cuándo pasar a la siguiente.
+
+658 palabras · 4:32 a 145 palabras por minuto.
+
+---
+
+**[1]** Hola, soy Stiven Melo y este es mi proyecto de DataXperience. Analicé la Encuesta
+Anual de Comercio 2024 del DANE: casi diez mil empresas comerciales colombianas, con sesenta
+y tres variables cada una.
+
+**[2]** Elegí la EAC por una razón que lo cambia todo: no es una muestra, es un censo. Así
+que estos números no son estimaciones con margen de error: son el dato real.
+
+Eso sí: solo entran empresas de diez o más personas, o con ventas sobre dos mil trescientos
+millones. Es el comercio formal mediano y grande, no el comercio colombiano.
+
+**[3]** Primera etapa: preparar los datos.
+
+**[4]** El archivo no se deja leer de entrada; eso se arregla al cargarlo. Lo interesante
+vino después: nueve problemas.
+
+Trescientas veintinueve empresas tenían todo en cero: no operaron en 2024 y arrastrarían los
+promedios. Las eliminé. Los valores negativos, en cambio, eran reales —empresas que
+vendieron por debajo del costo— y los conservé.
+
+Pasé de diez mil doscientas treinta y ocho empresas a nueve mil novecientas nueve.
+
+**[5]** Segunda etapa: medir.
+
+**[6]** Mi hipótesis: el sector está concentrado. La venta media es de cincuenta y siete mil
+quinientos millones de pesos; la mediana, trece mil seiscientos. El ochenta y cinco por
+ciento de las empresas vende menos que la media: ese promedio describe a una empresa que
+casi no existe.
+
+**[7]** Le puse número con la curva de Lorenz: cuanto más se hunde, más concentrado está el
+sector. El Gini de las ventas es cero coma setenta y nueve: el uno por ciento mayor genera
+el treinta y ocho por ciento de las ventas, y el diez por ciento mayor, el setenta y dos.
+
+**[8]** Aquí llegó la decisión más interesante. La regla del rango intercuartílico marca
+como atípicas a mil ciento cuarenta y cinco empresas, el once coma seis por ciento. Antes de
+borrarlas miré cuánto pesan: concentran el setenta y cuatro por ciento de las ventas.
+
+Borrar «el doce por ciento de las filas» suena asumible; borrar tres cuartas partes del
+sector, no. Las conservé, y cambié de herramienta: mediana y escala logarítmica.
+
+**[9]** Y así se ve en el cuaderno: cinco líneas calculan el rango intercuartílico y marcan
+esas mil ciento cuarenta y cinco empresas, y una más mide cuánto pesan. Cada decisión está
+en su celda, con su resultado al lado.
+
+**[10]** La hipótesis se confirma, pero se cae en un punto, y ese punto es el hallazgo:
+suponía que la concentración era igual en todo el comercio, y no lo es. Varía casi cuatro
+veces entre dominios.
+
+**[11]** Tercera etapa: modelar.
+
+**[12]** ¿Se puede estimar el tamaño de una empresa sin ver sus balances? Entrené una
+regresión que estima la producción bruta con dos datos observables desde fuera: cuánta gente
+emplea y cuánto les paga, en escala logarítmica.
+
+Sobre el veinte por ciento que nunca vio: R² de cero coma setenta y tres y error mediano del
+treinta y cinco por ciento. Y la nómina pesa cinco veces más que el número de empleados:
+cuánto paga una empresa dice más de su tamaño que a cuánta gente emplea.
+
+**[13]** Una advertencia que vale más que el modelo: sin logaritmos el R² sube, pero el
+error mediano casi se duplica. El R² premia acertarle a las pocas empresas enormes. Elegir
+por R² habría sido elegir mal.
+
+**[14]** ¿Para qué sirve? El personal y la nómina ya los observan un banco o una secretaría
+de desarrollo económico, por la planilla de seguridad social. Con esos dos datos se puede
+dimensionar un cliente antes de pedirle balances, o estimar un segmento sin esperar al DANE.
+
+Y para qué no sirve: con ese error no se decide un crédito. Sirve para segmentar y
+priorizar.
+
+**[15]** Tres cosas me llevo: mirar la forma de la distribución antes que su centro;
+sospechar de toda media que no venga con su mediana; y entender que decidir qué hacer con
+los atípicos es de contenido, no de limpieza.
+
+Todo el código, los datos y esta presentación están en el repositorio. Gracias por verme.
+
+---
+
+> Este texto se genera desde los bloques de arriba: si cambias uno, cambia también aquí.

@@ -3,7 +3,7 @@
 | Archivo | Qué es |
 |---|---|
 | `EAC-2024-presentacion.pptx` | Presentación de apoyo del video — 15 diapositivas, formato 16:9, presentador único |
-| `figuras/` | Las figuras de los cuadernos exportadas a PNG, que son las que usa la presentación |
+| [`figuras/`](figuras/) | Las figuras de los cuadernos exportadas a PNG. Su README dice qué celda produce cada una y en qué diapositiva se usa |
 
 El guion hablado, con tiempos por diapositiva, está en
 [`../video/guion-video.md`](../video/guion-video.md). Cada diapositiva lleva además su

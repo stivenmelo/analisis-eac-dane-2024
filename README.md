@@ -126,7 +126,7 @@ rutas funcionan igual ejecutando desde `notebook/` o desde la raíz del reposito
 - **Duración:** 2 a 5 minutos (fuera de ese rango no se califica). El guion está cronometrado
   en **4:40**, con 20 segundos de margen.
 - **Guion y tiempos:** [`video/guion-video.md`](video/guion-video.md)
-- **Enlace público:** _(pendiente — pegar aquí al subirlo)_
+- **Ver el video:** https://youtu.be/GgUPByaIKXI
 
 ## 8. Estado del proyecto
 
@@ -135,14 +135,12 @@ rutas funcionan igual ejecutando desde `notebook/` o desde la raíz del reposito
 - [x] **Módulo 3** — Modelado, visualización y storytelling
 - [x] Presentación de apoyo (15 diapositivas con notas del orador)
 - [x] Guion del video, dentro del límite de duración
-- [ ] **Video grabado y publicado**
-- [ ] Enlace del video en este README (sección 7) y en [`video/README.md`](video/README.md)
+- [x] **Video grabado y publicado** — https://youtu.be/GgUPByaIKXI
+- [x] Enlace del video en este README (sección 7) y en [`video/README.md`](video/README.md)
 - [ ] Repositorio público y enlace pegado en Canvas
 
 ### Detalles que faltan en los cuadernos
 
 - Ejecutar el cuaderno completo de arriba a abajo (*Restart & Run All*) antes de entregar: la
   numeración de celdas guardada no corresponde a una corrida limpia.
-- El diccionario de variables que [`datos/README.md`](datos/README.md) anuncia todavía no está
-  escrito; la tabla del apartado 1.4.2 del cuaderno es su base.
 
